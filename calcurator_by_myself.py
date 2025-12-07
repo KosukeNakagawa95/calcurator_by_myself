@@ -4,7 +4,13 @@ def get_valid_number(message):
     while True:
         try:
             user_input = int(input(message))
-            return user_input
+            
+            if user_input <= 0:
+                print("正しく入力せよ")
+                continue
+
+            else:    
+                return  user_input 
         
         except ValueError:
             print("半角数字を入力せよ")
